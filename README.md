@@ -12,7 +12,6 @@ Can be easily deployed to AWS Lambda using serverless.
 Example output message:
 
 ```
-{
 Today is 22-02-2022.
 
 Clouds.
@@ -23,5 +22,6 @@ Daylight hours from 2022-02-22 08:14:56 to 2022-02-22 18:31:58 for 10.3 hours.
 EUR: 2.9397 ↑0.66%
 USD: 2.587 ↑0.75%
 RUB: 3.3681 ↓0.65%
-}
 ```
+
+Create .env file with weather api at api.openweathermap.org, bot_token and chat_id message should be sent to.
