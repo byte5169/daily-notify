@@ -1,0 +1,23 @@
+service: Daily-Notify
+
+provider:
+  name: aws
+  profile: home
+  region: eu-central-1
+  runtime: python3.7
+  memorySize: 512
+  timeout: 360
+
+functions:
+  Handler:
+    handler: run.main
+
+plugins:
+  - serverless-python-requirements
+custom:
+  pythonRequirements:
+    # fileName: requirements.txt
+    dockerizePip: True
+    useDownloadCache: false
+    useStaticCache: false
+    pythonBin: ${opt:pythonBin, self:provider.runtime}
